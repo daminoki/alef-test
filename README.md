@@ -1,75 +1,31 @@
-# Nuxt Minimal Starter
+# Test task for Alef company
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Description
+This project involves developing a Vue.js web application where users can fill out personal information, including details about their children.
 
-## Setup
+The form should include input fields for the user's full name and age. Below, users can add information about their children by clicking a "+" button, which displays input fields for each child's name and age. Users can add up to 5 children; once the limit is reached, the "+" button becomes disabled. Each child entry includes a "delete" button, allowing users to remove specific entries.
 
-Make sure to install dependencies:
+The application is front-end only, with no server-side functionality. When the "Save" button is clicked, the entered data is displayed on a "Preview" page.
 
-```bash
-# npm
+A separate read-only page also displays the saved information without edit options.
+
+## Getting started locally
+```
+git clone [repository-url]
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+## Additional information
+* node version: Node.js >= 20
+* npm version: 10.2.4
 
-Build the application for production:
+## Deployment
+You can access the live demo at: 
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Technologies Used
+* Vue3
+* Nuxt3
+* TypeScript
+* Pinia
+* Vuetify
