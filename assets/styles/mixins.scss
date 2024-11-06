@@ -1,0 +1,40 @@
+@mixin container {
+    max-width: 1212px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+@mixin transition($properties...) {
+    $unfoldedTransitions: ();
+    @each $property in $properties {
+      $unfoldedTransitions: append($unfoldedTransitions, $property + ' 0.2s ease-in-out', comma);
+    }
+    
+    -webkit-transition: $unfoldedTransitions;
+    transition: $unfoldedTransitions;
+}  
+
+
+@mixin header-link {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--typo-gray);
+    text-decoration: none;
+
+    @media (hover: hover) {
+        &:hover {
+            color: var(--typo-contrast);
+        }
+    }
+}
+
+@mixin p3 {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    font-style: normal;
+}

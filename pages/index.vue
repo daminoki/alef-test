@@ -1,3 +1,3 @@
 <template>
-  <div>test</div>
+  <TheForm />
 </template>
