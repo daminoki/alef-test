@@ -31,13 +31,20 @@ const rules = useValidationRules()
 
 const formStore = useFormStore()
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   if (!isFormValid.value) {
     return
   }
 
   formStore.saveFormData(formData.value)
-  console.log('Form data saved to store:', formData.value)
+
+  await navigateTo({ path: '/preview' })
+
+  formData.value = {
+    name: '',
+    age: null,
+    children: [],
+  }
 }
 </script>
 
