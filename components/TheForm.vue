@@ -9,6 +9,7 @@ const formData = ref<FormData>({
   age: null,
   children: [],
 })
+const isFormValid = ref(false)
 
 const handleAddButtonClick = () => {
   if (formData.value.children.length < MAX_CHILD_NUMBER) {
@@ -28,13 +29,21 @@ const isAddButtonVisible = computed(() => formData.value.children.length < MAX_C
 
 const rules = useValidationRules()
 
+const formStore = useFormStore()
+
 const handleSubmit = () => {
-  console.log(formData.value)
+  if (!isFormValid.value) {
+    return
+  }
+
+  formStore.saveFormData(formData.value)
+  console.log('Form data saved to store:', formData.value)
 }
 </script>
 
 <template>
   <v-form
+    v-model="isFormValid"
     class="form"
     @submit.prevent
   >

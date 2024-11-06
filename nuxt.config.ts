@@ -6,6 +6,13 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     'vuetify-nuxt-module',
     '@nuxtjs/google-fonts',
+    '@pinia/nuxt',
+  ],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
   ],
   devtools: { enabled: true },
   css: [
@@ -13,9 +20,6 @@ export default defineNuxtConfig({
     '@/assets/styles/variables.scss',
     '@/assets/styles/main.scss',
   ],
-  build: {
-    transpile: ['pinia-plugin-persistedstate'],
-  },
   compatibilityDate: '2024-04-03',
   typescript: {
     typeCheck: true,
