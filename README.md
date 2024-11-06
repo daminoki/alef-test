@@ -1,5 +1,7 @@
 # Test task for Alef company
 
+![Снимок экрана 2024-11-06 в 18 41 11](https://github.com/user-attachments/assets/00bee8dd-7f2d-431f-adbf-cf24b6562235)
+
 ## Description
 This project involves developing a Vue.js web application where users can fill out personal information, including details about their children.
 
@@ -21,7 +23,7 @@ npm run dev
 * npm version: 10.2.4
 
 ## Deployment
-You can access the live demo at: 
+You can access the live demo at: https://alef-test-mx2f.vercel.app/
 
 ## Technologies Used
 * Vue3
