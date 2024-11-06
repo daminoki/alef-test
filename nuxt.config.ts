@@ -1,15 +1,10 @@
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
+import { defineNuxtConfig } from 'nuxt/config'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
-    (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-      // @ts-expect-error: vuetify plugin type mismatch
-        config.plugins.push(vuetify({ autoImport: true }))
-      })
-    },
+    'vuetify-nuxt-module',
     '@nuxtjs/google-fonts',
   ],
   devtools: { enabled: true },
@@ -19,16 +14,9 @@ export default defineNuxtConfig({
     '@/assets/styles/main.scss',
   ],
   build: {
-    transpile: ['vuetify'],
+    transpile: ['pinia-plugin-persistedstate'],
   },
   compatibilityDate: '2024-04-03',
-  vite: {
-    vue: {
-      template: {
-        transformAssetUrls,
-      },
-    },
-  },
   typescript: {
     typeCheck: true,
   },

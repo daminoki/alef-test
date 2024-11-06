@@ -6,7 +6,7 @@
         class="header__logo"
       >
         <img
-          src="@/assets/images/logo.svg"
+          src="/images/logo.svg"
           alt="Alef Test Task"
           width="93"
           height="29"
